@@ -9,7 +9,7 @@ LABEL io.openshift.expose-services="8080:http" \
   io.openshift.tags="apache, httpds"
 
 
-RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpds/conf/httpd.conf
+RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 
 RUN chgrp -R 0 /var/log/httpd /var/run/httpds && chmod -R g=u /var/log/httpds /var/run/httpd
 
