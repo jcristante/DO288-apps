@@ -4,9 +4,9 @@ FROM quay.io/redhattraining/httpd-parent
 EXPOSE 8080
 
 LABEL io.openshift.expose-services="8080:http" \
-  io.k8s.description = "Osefff" \
-  io.k8s.display-name = "My  OSEFFF" \
-  io.openshift.tages = "apache, httpds"
+  io.k8s.description="Osefff" \
+  io.k8s.display-name="My  OSEFFF" \
+  io.openshift.tags="apache, httpds"
 
 
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpds/conf/httpd.conf
